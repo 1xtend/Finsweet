@@ -1,0 +1,89 @@
+@import './nullstyle.scss';
+@import './components.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+// Global
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+h1 {
+  @include textProperties(700, 64px, 120%, #fff);
+}
+
+.secondary-button {
+  @include textProperties(500, 16px, 19px, var(--color-primary-text));
+
+  background-color: #ffffff;
+  backdrop-filter: blur(40px);
+  border-radius: 4px;
+  padding: 16px 32px;
+  transition: background-color 0.2s linear;
+
+  &:hover {
+    background-color: var(--color-border);
+  }
+}
+
+.primary-button {
+  @include textProperties(500, 16px, 19px, #fff);
+  background: #70c174;
+  backdrop-filter: blur(40px);
+  border-radius: 4px;
+  padding: 16px 32px;
+}
+
+// Header
+
+.header {
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    background-color: transparent;
+  }
+
+  //   &__logo {
+  //   }
+}
+
+.navbar {
+  &__list {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  &__link {
+    @include textProperties(500, 16px, 19px, var(--color-secondary-text));
+    transition: color 0.2s linear;
+
+    &:hover {
+      color: var(--color-black);
+    }
+
+    &.active {
+      color: var(--color-black);
+    }
+  }
+
+  &__btn {
+    @include textProperties(500, 16px, 19px, #fff);
+    background-color: var(--color-primary-text);
+    padding: 12px 32px;
+    border-radius: 4px;
+    transition: background-color 0.2s linear;
+
+    &:hover {
+      background-color: var(--color-black);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+// Vars
+
+:root {
+  --color-green-primary: #70c174;
+  --color-green-secondary: #bef3c0;
+  --color-green-tertiary: #eff7f2;
+  --color-black: #0b0706;
+  --color-primary-text: #1d2130;
+  --color-secondary-text: #525560;
+  --color-off-white: #ebf0f9;
+  --color-border: #e5e5e5;
+}
+
+// Mixins
+
+@mixin textProperties($fw, $fz, $lh, $clr) {
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+  color: $clr;
+}
+
+@mixin paragraph {
+  font-size: 16px;
+  line-height: 160%;
+}

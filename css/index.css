@@ -1,0 +1,261 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*-------------------*/
+:root {
+  --color-green-primary: #70c174;
+  --color-green-secondary: #bef3c0;
+  --color-green-tertiary: #eff7f2;
+  --color-black: #0b0706;
+  --color-primary-text: #1d2130;
+  --color-secondary-text: #525560;
+  --color-off-white: #ebf0f9;
+  --color-border: #e5e5e5;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 120%;
+  color: #fff;
+}
+
+.secondary-button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--color-primary-text);
+  background-color: #ffffff;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  border-radius: 4px;
+  padding: 16px 32px;
+  transition: background-color 0.2s linear;
+}
+.secondary-button:hover {
+  background-color: var(--color-border);
+}
+
+.primary-button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+  background: #70c174;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  border-radius: 4px;
+  padding: 16px 32px;
+}
+
+.header__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  background-color: transparent;
+}
+
+.navbar__list {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.navbar__link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--color-secondary-text);
+  transition: color 0.2s linear;
+}
+.navbar__link:hover {
+  color: var(--color-black);
+}
+.navbar__link.active {
+  color: var(--color-black);
+}
+.navbar__btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+  background-color: var(--color-primary-text);
+  padding: 12px 32px;
+  border-radius: 4px;
+  transition: background-color 0.2s linear;
+}
+.navbar__btn:hover {
+  background-color: var(--color-black);
+}
+
+.hero {
+  background: url("../images/hero/hero__bg.png") center no-repeat;
+}
+.hero__body {
+  padding: 128px 0 64px;
+}
+.hero__main {
+  max-width: 640px;
+}
+.hero__title {
+  margin-bottom: 48px;
+}
+.hero__btn-cnt {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 192px;
+}
+.hero__btn_2 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+  padding-left: 32px;
+  background-color: transparent;
+  position: relative;
+  transition: color 0.2s linear;
+}
+.hero__btn_2 span {
+  transition: background-color 0.2s linear;
+}
+.hero__btn_2:hover {
+  color: var(--color-border);
+}
+.hero__btn_2:hover span::after {
+  background-color: var(--color-border);
+}
+.hero__btn_2 span::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url("../images/hero/hero__triangle.svg") 8px 50% no-repeat, #fff;
+  border-radius: 50%;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hero__achievements-cnt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.hero__achievements-cnt::after {
+  content: "";
+  background-color: var(--color-border);
+  height: 1px;
+  flex: 1;
+}
+.hero__achievement {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+}
+.hero__achievement:first-child {
+  margin-right: 24px;
+}
+.hero__achievement:last-child {
+  order: 3;
+  margin-left: 24px;
+}
