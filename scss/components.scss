@@ -13,9 +13,8 @@
 
 // Mixins
 
-@mixin textProperties($fw, $fz, $lh, $clr) {
+@mixin textProperties($fw, $lh, $clr) {
   font-weight: $fw;
-  font-size: $fz;
   line-height: $lh;
   color: $clr;
 }

@@ -1,10 +1,16 @@
 @import './style.scss';
 
+// Hero
+
 .hero {
   background: url('../images/hero/hero__bg.png') center no-repeat;
 
   &__body {
     padding: 128px 0 64px;
+
+    @media (max-width: 768px) {
+      padding: 32px 16px;
+    }
   }
 
   &__main {
@@ -16,13 +22,20 @@
   }
 
   &__btn-cnt {
-    display: flex;
+    display: inline-flex;
     gap: 24px;
     margin-bottom: 192px;
+
+    @media (max-width: 425px) {
+      flex-direction: column;
+      margin-bottom: 96px;
+    }
   }
 
   &__btn_2 {
-    @include textProperties(500, 16px, 19px, #fff);
+    @include textProperties(500, 19px, #fff);
+    font-size: 16px;
+
     padding-left: 32px;
     background-color: transparent;
     position: relative;
@@ -45,7 +58,7 @@
       width: 24px;
       height: 24px;
 
-      background: url('../images/hero/hero__triangle.svg') 8px 50% no-repeat, #fff;
+      background: url('../images/global-images/triangle.svg') 8px 50% no-repeat, #fff;
       border-radius: 50%;
       backdrop-filter: blur(40px);
 
@@ -61,6 +74,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    gap: 24px;
 
     &::after {
       content: '';
@@ -71,15 +85,111 @@
   }
 
   &__achievement {
-    @include textProperties(500, 18px, 21px, #fff);
+    @include textProperties(500, 21px, #fff);
+    font-size: 18px;
 
-    &:first-child {
-      margin-right: 24px;
+    @media (max-width: 425px) {
+      font-size: 12px;
     }
 
     &:last-child {
       order: 3;
-      margin-left: 24px;
     }
+  }
+}
+
+// Nature
+
+.nature {
+  &__body {
+    padding: 96px 0 64px;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 64px;
+  }
+
+  &__content {
+    max-width: 600px;
+    padding-left: 97px;
+
+    @media (max-width: 768px) {
+      padding-left: 48px;
+    }
+
+    @media (max-width: 425px) {
+      padding-left: 0;
+    }
+  }
+
+  &__explanation-span {
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    @include textProperties(700, 120%, var(--color-primary-text));
+    font-size: 48px;
+
+    margin-bottom: 32px;
+
+    @media (max-width: 768px) {
+      font-size: 40px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 64px;
+
+    p {
+      @include paragraph;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__btn {
+  }
+
+  &__image {
+    img {
+      max-width: 480px;
+    }
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__bottom {
+  }
+
+  &__secondary-title {
+    @include textProperties(500, 19px, var(--color-primary-text));
+    font-size: 16px;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    &::after {
+      content: '';
+      background-color: var(--color-border);
+      height: 1px;
+      flex: 1;
+    }
+  }
+
+  &__supporters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
