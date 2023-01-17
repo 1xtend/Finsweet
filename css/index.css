@@ -389,7 +389,7 @@ h1 {
 }
 .nature__content {
   max-width: 600px;
-  padding-left: 97px;
+  padding-left: 96px;
 }
 @media (max-width: 768px) {
   .nature__content {
@@ -427,6 +427,27 @@ h1 {
 .nature__text p:last-child {
   margin-bottom: 0;
 }
+.nature__image {
+  position: relative;
+  border-radius: 12px;
+}
+.nature__image::after {
+  content: "";
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  background: url("../images/global-images/big-triangle.svg") center no-repeat, #fff;
+  border-radius: 50%;
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.nature__image:hover::after {
+  background-color: var(--color-border);
+  cursor: pointer;
+}
 .nature__image img {
   max-width: 480px;
 }
@@ -456,4 +477,94 @@ h1 {
 .nature__supporters {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 40px;
+}
+
+.earth {
+  background-color: var(--color-green-tertiary);
+}
+.earth__body {
+  padding: 96px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.earth__content {
+  max-width: 600px;
+  padding-left: 96px;
+}
+@media (max-width: 768px) {
+  .earth__content {
+    padding-left: 48px;
+  }
+}
+@media (max-width: 425px) {
+  .earth__content {
+    padding-left: 0;
+  }
+}
+.earth__explanation-span {
+  margin-bottom: 32px;
+}
+.earth__title {
+  font-weight: 700;
+  line-height: 120%;
+  color: var(--color-primary-text);
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .earth__title {
+    font-size: 40px;
+  }
+}
+.earth__text {
+  font-size: 16px;
+  line-height: 160%;
+  margin-bottom: 32px;
+}
+.earth__list {
+  border-left: 1px solid var(--color-border);
+}
+.earth__elem {
+  margin: 0 0 24px 30px;
+  position: relative;
+  padding-left: 52px;
+}
+.earth__elem:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 425px) {
+  .earth__elem {
+    padding-left: 40px;
+    margin: 0 0 24px 15px;
+  }
+}
+.earth__icon {
+  background-color: #83d187;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+}
+.earth__list-title {
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--color-primary-text);
+  font-size: 24px;
+}
+.earth__list-text {
+  font-size: 16px;
+  line-height: 160%;
+}
+.earth__image {
+  border-radius: 12px;
+}
+@media (max-width: 1024px) {
+  .earth__image {
+    display: none;
+  }
 }

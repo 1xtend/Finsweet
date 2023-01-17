@@ -114,7 +114,7 @@
 
   &__content {
     max-width: 600px;
-    padding-left: 97px;
+    padding-left: 96px;
 
     @media (max-width: 768px) {
       padding-left: 48px;
@@ -153,10 +153,30 @@
     }
   }
 
-  &__btn {
-  }
-
   &__image {
+    position: relative;
+    border-radius: 12px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 64px;
+      height: 64px;
+
+      background: url('../images/global-images/big-triangle.svg') center no-repeat, #fff;
+      border-radius: 50%;
+      backdrop-filter: blur(40px);
+
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover::after {
+      background-color: var(--color-border);
+      cursor: pointer;
+    }
+
     img {
       max-width: 480px;
     }
@@ -164,9 +184,6 @@
     @media (max-width: 1024px) {
       display: none;
     }
-  }
-
-  &__bottom {
   }
 
   &__secondary-title {
@@ -191,5 +208,98 @@
   &__supporters {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 40px;
+  }
+}
+
+// Earth
+
+.earth {
+  background-color: var(--color-green-tertiary);
+
+  &__body {
+    padding: 96px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-width: 600px;
+    padding-left: 96px;
+
+    @media (max-width: 768px) {
+      padding-left: 48px;
+    }
+
+    @media (max-width: 425px) {
+      padding-left: 0;
+    }
+  }
+
+  &__explanation-span {
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    @include textProperties(700, 120%, var(--color-primary-text));
+    font-size: 48px;
+    margin-bottom: 16px;
+
+    @media (max-width: 768px) {
+      font-size: 40px;
+    }
+  }
+
+  &__text {
+    @include paragraph;
+    margin-bottom: 32px;
+  }
+
+  &__list {
+    border-left: 1px solid var(--color-border);
+  }
+
+  &__elem {
+    margin: 0 0 24px 30px;
+    position: relative;
+    padding-left: 52px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 425px) {
+      padding-left: 40px;
+      margin: 0 0 24px 15px;
+    }
+  }
+
+  &__icon {
+    background-color: #83d187;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+  }
+
+  &__list-title {
+    @include textProperties(700, 28px, var(--color-primary-text));
+    font-size: 24px;
+  }
+
+  &__list-text {
+    @include paragraph;
+  }
+
+  &__image {
+    border-radius: 12px;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
   }
 }

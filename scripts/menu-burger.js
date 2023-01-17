@@ -11,3 +11,10 @@ navbarToggler.addEventListener('click', (e) => {
     body.classList.remove('fixed');
   }
 });
+
+navbar.addEventListener('click', (e) => {
+  if (e.target.classList.contains('navbar__link') || e.target.classList.contains('navbar__btn')) {
+    navbar.classList.remove('active');
+    body.classList.remove('fixed');
+  }
+});
