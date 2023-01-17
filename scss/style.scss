@@ -37,6 +37,7 @@ h1 {
   @include textProperties(500, 19px, var(--color-primary-text));
   font-size: 16px;
 
+  display: inline-block;
   background-color: #ffffff;
   backdrop-filter: blur(40px);
   border-radius: 4px;
@@ -51,6 +52,8 @@ h1 {
 .primary-button {
   @include textProperties(500, 19px, #fff);
   font-size: 16px;
+
+  display: inline-block;
   background-color: #70c174;
   backdrop-filter: blur(40px);
   border-radius: 4px;

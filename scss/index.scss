@@ -141,10 +141,10 @@
   }
 
   &__text {
-    margin-bottom: 64px;
+    margin-bottom: 48px;
 
     p {
-      @include paragraph;
+      @include paragraph(var(--color-secondary-text));
       margin-bottom: 40px;
 
       &:last-child {
@@ -251,7 +251,8 @@
   }
 
   &__text {
-    @include paragraph;
+    @include paragraph(var(--color-secondary-text));
+    color: var(--color-secondary-text);
     margin-bottom: 32px;
   }
 
@@ -292,7 +293,8 @@
   }
 
   &__list-text {
-    @include paragraph;
+    @include paragraph(var(--color-secondary-text));
+    color: var(--color-secondary-text);
   }
 
   &__image {
@@ -301,5 +303,100 @@
     @media (max-width: 1024px) {
       display: none;
     }
+  }
+}
+
+// Society
+
+.society {
+  &__body {
+    padding: 96px 0;
+  }
+
+  &__content {
+    max-width: 705px;
+    padding-left: 96px;
+    margin-bottom: 64px;
+
+    @media (max-width: 768px) {
+      padding-left: 48px;
+    }
+
+    @media (max-width: 425px) {
+      padding-left: 0;
+    }
+  }
+
+  &__explanation-span {
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    @include textProperties(700, 120%, var(--color-primary-text));
+    font-size: 48px;
+
+    @media (max-width: 768px) {
+      font-size: 40px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    @media (max-width: 1090px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__card {
+    max-width: 411px;
+    padding: 80px 48px 48px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-black);
+      top: 0;
+      left: 0;
+      opacity: 0.5;
+    }
+
+    &:nth-child(1) {
+      background: url('../images/society/card-1.jpg') center no-repeat;
+    }
+
+    &:nth-child(2) {
+      background: url('../images/society/card-2.jpg') center no-repeat;
+    }
+
+    &:nth-child(3) {
+      background: url('../images/society/card-3.jpg') center no-repeat;
+    }
+
+    @media (max-width: 768px) {
+      padding: 40px 24px 24px;
+    }
+  }
+
+  &__card-title {
+    @include textProperties(700, 150%, #fff);
+    font-size: 28px;
+    position: relative;
+    margin-bottom: 16px;
+  }
+
+  &__card-text {
+    @include paragraph(#fff);
+    position: relative;
+    margin-bottom: 64px;
   }
 }
