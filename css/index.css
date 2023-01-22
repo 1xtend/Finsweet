@@ -675,6 +675,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   padding: 96px 0;
+  margin-bottom: 96px;
 }
 .stats__content {
   max-width: 611px;
@@ -752,7 +753,6 @@ h1 {
 .volunteer__body {
   background: url("../images/volunteer/volunteer__bg.jpg") center no-repeat;
   padding: 93px 0 92px;
-  margin: 96px 0;
   text-align: center;
   border-radius: 12px;
   position: relative;
@@ -814,4 +814,47 @@ h1 {
     flex-direction: column;
     gap: 16px;
   }
+}
+
+.news__body {
+  padding: 96px 0;
+}
+.news__title {
+  font-weight: 500;
+  line-height: 140%;
+  color: var(--color-primary-text);
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.news__title::after {
+  content: "";
+  background-color: var(--color-border);
+  height: 1px;
+  flex: 1;
+}
+.news__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
+  grid-gap: 24px;
+}
+.news__card {
+  max-width: 302px;
+}
+.news__card img {
+  margin-bottom: 16px;
+}
+.news__card h3 {
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--color-black);
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.news__card p {
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--color-secondary-text);
 }

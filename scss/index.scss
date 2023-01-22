@@ -411,6 +411,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 96px 0;
+    margin-bottom: 96px;
   }
 
   &__content {
@@ -493,7 +494,6 @@
   &__body {
     background: url('../images/volunteer/volunteer__bg.jpg') center no-repeat;
     padding: 93px 0 92px;
-    margin: 96px 0;
     text-align: center;
     border-radius: 12px;
     position: relative;
@@ -554,9 +554,51 @@
     }
   }
 }
-.container {
-}
-.primary-button {
-}
-.secondary-button {
+
+// News
+
+.news {
+  &__body {
+    padding: 96px 0;
+  }
+
+  &__title {
+    @include textProperties(500, 140%, var(--color-primary-text));
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 48px;
+
+    &::after {
+      content: '';
+      background-color: var(--color-border);
+      height: 1px;
+      flex: 1;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(302px, 1fr));
+    grid-gap: 24px;
+  }
+
+  &__card {
+    max-width: 302px;
+
+    img {
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      @include textProperties(500, 150%, var(--color-black));
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      @include paragraph(var(--color-secondary-text));
+    }
+  }
 }
